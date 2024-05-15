@@ -20,7 +20,7 @@ public class CourierAPI {
     }
 
     @Step("Создание курьера")
-    public ValidatableResponse create(Courier courier) {
+    public ValidatableResponse createCourier(Courier courier) {
         return given()
                 .contentType(ContentType.JSON)
                 .and()
@@ -31,7 +31,7 @@ public class CourierAPI {
     }
 
     @Step("Логин курьера в системе")
-    public ValidatableResponse login(CourierCredentials credentials) {
+    public ValidatableResponse loginCourier(CourierCredentials credentials) {
         return given()
                 .contentType(ContentType.JSON)
                 .and()
@@ -42,7 +42,7 @@ public class CourierAPI {
     }
 
     @Step("Удаление курьера по id")
-    public void delete(int courierId) {
+    public void deleteCourier(int courierId) {
         given()
                 .contentType(ContentType.JSON)
                 .delete(DELETE + courierId)
